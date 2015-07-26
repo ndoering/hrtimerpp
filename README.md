@@ -7,7 +7,6 @@ This library provides a class based implementation of timers and timeseries. Tim
 * CMake (Version >= 2.8)
 
 ## Roadmap
-* Timestamps
 * Timer
 * Timeseries
 * statistical analysis for timeseries
