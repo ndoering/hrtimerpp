@@ -1,7 +1,7 @@
 # hrtimerpp
 A high resolution timer for Linux systems written in C++.
 
-This library provides a class based implementation of timers and timeseries. Timeseries are containers for timers facilitating the use of multiple timers.
+This library provides a class based interface for high resolution timers for C++. The goal is to have a usable set of class for the needs of time measuring and statistical analysis for series of an arbitrary number of measurements.
 
 ## Requirements
 * Linux kernel (Version >= 2.6)
