@@ -117,14 +117,14 @@ public:
      * @param rhs
      * @return
      */
-    Timestamp operator+(const Timestamp& rhs) const;
+    const Timestamp operator+(const Timestamp& rhs) const;
 
     /**
      * \attention No overflow checking.
      * @param rhs
      * @return
      */
-    Timestamp operator-(const Timestamp& rhs) const;
+    const Timestamp operator-(const Timestamp& rhs) const;
 
     /**
      * Checks if the both objects are the same or of the same age, i.e. have the
@@ -187,6 +187,15 @@ public:
      * @return
      */
     long getNanoSeconds() const;
+
+    /**
+     * Returns the time in seconds as a double.
+     *
+     * \attention There is a possible loss of accuracy due to the precission of
+     * double variables.
+     * @return
+     */
+    double getTime() const;
 
     /**
      * Sets the time to the given values

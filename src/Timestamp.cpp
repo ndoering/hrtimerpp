@@ -102,6 +102,15 @@ long Timestamp::getNanoSeconds() const {
 }
 
 /*
+ * Get the time in seconds as a double precission variable.
+ */
+double Timestamp::getTime() const {
+    double time = this->getSeconds() + (this->getNanoSeconds() / BILLION);
+
+    return time;
+}
+
+/*
  * Set the number of seconds.
  */
 void Timestamp::setSeconds(const long seconds) {
@@ -190,7 +199,7 @@ Timestamp& Timestamp::operator -=(const Timestamp& rhs) {
  * Creates a new Timestamp with the time value from this object and adds the
  * value from the other to it. The original objects are not changed.
  */
-Timestamp Timestamp::operator +(const Timestamp& rhs) const {
+const Timestamp Timestamp::operator +(const Timestamp& rhs) const {
     Timestamp newTimestamp = *this;
 
     newTimestamp += rhs;
@@ -202,7 +211,7 @@ Timestamp Timestamp::operator +(const Timestamp& rhs) const {
  * Creates a new Timestamp with the time value from this object and subtracts
  * the value from the other to it. The original objects are not changed.
  */
-Timestamp Timestamp::operator -(const Timestamp& rhs) const {
+const Timestamp Timestamp::operator -(const Timestamp& rhs) const {
     Timestamp newTimestamp = *this;
 
     newTimestamp -= rhs;

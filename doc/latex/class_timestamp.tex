@@ -22,9 +22,9 @@
 \item 
 \hyperlink{class_timestamp}{Timestamp} \& \hyperlink{class_timestamp_ad8ac2cf2eebb081ba04f61f1663373f7}{operator-\/=} (const \hyperlink{class_timestamp}{Timestamp} \&rhs)
 \item 
-\hyperlink{class_timestamp}{Timestamp} \hyperlink{class_timestamp_a18c4e9ba6a580961856082ac72294339}{operator+} (const \hyperlink{class_timestamp}{Timestamp} \&rhs) const 
+const \hyperlink{class_timestamp}{Timestamp} \hyperlink{class_timestamp_a8a2196e9f83869e3c4c13eae0b610353}{operator+} (const \hyperlink{class_timestamp}{Timestamp} \&rhs) const 
 \item 
-\hyperlink{class_timestamp}{Timestamp} \hyperlink{class_timestamp_ad2ecf3fc732c5609983d797331810e11}{operator-\/} (const \hyperlink{class_timestamp}{Timestamp} \&rhs) const 
+const \hyperlink{class_timestamp}{Timestamp} \hyperlink{class_timestamp_a92f658880325e560dca3b96f21f13be4}{operator-\/} (const \hyperlink{class_timestamp}{Timestamp} \&rhs) const 
 \item 
 bool \hyperlink{class_timestamp_ab3aeec868b34b270b40dde4d0154b3ae}{operator==} (const \hyperlink{class_timestamp}{Timestamp} \&rhs) const 
 \item 
@@ -43,6 +43,8 @@ struct timespec \hyperlink{class_timestamp_a103ca3563060c6d85e3c020417a7af2b}{ge
 long \hyperlink{class_timestamp_abf44ca7ba401217cf6f894efc76696e5}{get\+Seconds} () const 
 \item 
 long \hyperlink{class_timestamp_a3aa18c0e8428f94c23f17be60486bcb7}{get\+Nano\+Seconds} () const 
+\item 
+double \hyperlink{class_timestamp_a080012781d6ba5df8e46ce71a42745e2}{get\+Time} () const 
 \item 
 void \hyperlink{class_timestamp_a516d4b5561246093694544168036ac13}{set} (const long seconds, const long nanoseconds)
 \item 
@@ -158,6 +160,21 @@ Returns only the nanoseconds part of the time. \begin{DoxyReturn}{Returns}
 Returning only the seconds part of the time. \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+\hypertarget{class_timestamp_a080012781d6ba5df8e46ce71a42745e2}{}\index{Timestamp@{Timestamp}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Timestamp@{Timestamp}}
+\subsubsection[{get\+Time}]{\setlength{\rightskip}{0pt plus 5cm}double Timestamp\+::get\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_timestamp_a080012781d6ba5df8e46ce71a42745e2}
+Returns the time in seconds as a double.
+
+\begin{DoxyAttention}{Attention}
+There is a possible loss of accuracy due to the precission of double variables. 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_timestamp_a103ca3563060c6d85e3c020417a7af2b}{}\index{Timestamp@{Timestamp}!get\+Timestamp@{get\+Timestamp}}
 \index{get\+Timestamp@{get\+Timestamp}!Timestamp@{Timestamp}}
 \subsubsection[{get\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}struct timespec Timestamp\+::get\+Timestamp (
@@ -183,13 +200,13 @@ Checks for inequality of both values.
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-\hypertarget{class_timestamp_a18c4e9ba6a580961856082ac72294339}{}\index{Timestamp@{Timestamp}!operator+@{operator+}}
+\hypertarget{class_timestamp_a8a2196e9f83869e3c4c13eae0b610353}{}\index{Timestamp@{Timestamp}!operator+@{operator+}}
 \index{operator+@{operator+}!Timestamp@{Timestamp}}
-\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timestamp} Timestamp\+::operator+ (
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Timestamp} Timestamp\+::operator+ (
 \begin{DoxyParamCaption}
 \item[{const {\bf Timestamp} \&}]{rhs}
 \end{DoxyParamCaption}
-) const}\label{class_timestamp_a18c4e9ba6a580961856082ac72294339}
+) const}\label{class_timestamp_a8a2196e9f83869e3c4c13eae0b610353}
 \begin{DoxyAttention}{Attention}
 No overflow checking. 
 \end{DoxyAttention}
@@ -219,13 +236,13 @@ No overflow checking.
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-\hypertarget{class_timestamp_ad2ecf3fc732c5609983d797331810e11}{}\index{Timestamp@{Timestamp}!operator-\/@{operator-\/}}
+\hypertarget{class_timestamp_a92f658880325e560dca3b96f21f13be4}{}\index{Timestamp@{Timestamp}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!Timestamp@{Timestamp}}
-\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timestamp} Timestamp\+::operator-\/ (
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Timestamp} Timestamp\+::operator-\/ (
 \begin{DoxyParamCaption}
 \item[{const {\bf Timestamp} \&}]{rhs}
 \end{DoxyParamCaption}
-) const}\label{class_timestamp_ad2ecf3fc732c5609983d797331810e11}
+) const}\label{class_timestamp_a92f658880325e560dca3b96f21f13be4}
 \begin{DoxyAttention}{Attention}
 No overflow checking. 
 \end{DoxyAttention}
