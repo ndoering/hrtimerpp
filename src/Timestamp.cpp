@@ -270,3 +270,10 @@ bool Timestamp::operator >=(const Timestamp& rhs) const {
 bool Timestamp::operator <=(const Timestamp& rhs) const {
     return (*this == rhs) or (*this < rhs);
 }
+
+/*
+ * Sets the time values to the current time.
+ */
+void Timestamp::setNow() {
+    clock_gettime(CLOCK_REALTIME, &this->mTimestamp);
+}

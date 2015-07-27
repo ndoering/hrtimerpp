@@ -224,6 +224,11 @@ public:
      */
     long setNanoSeconds(const long nanoseconds);
 
+    /**
+     * Sets the time to the current time.
+     */
+    void setNow();
+
 private:
     struct timespec mTimestamp;
 };
