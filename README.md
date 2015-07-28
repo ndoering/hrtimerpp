@@ -3,26 +3,15 @@ A high resolution timer for Linux systems written in C++.
 
 This library provides a class based interface for high resolution timers for C++. The goal is to have a usable set of class for the needs of time measuring and statistical analysis for series of an arbitrary number of measurements.
 
+This code respects the version numbering system "Semantic Versioning 2.0.0", as described here: [semver.org](http://semver.org/)
+
 ## Requirements
 * Linux kernel (Version >= 2.6)
 * CMake (Version >= 2.8)
+* Doxygen (Version >= 2.9), for documentation
 
 ## Roadmap
-
-### Version 0.1
-* Timestamps (done)
-
-### Version 0.2
-* Timer (done)
-
-### Version 0.3
 * Timeseries (in progress)
-
-### Version 0.4
 * statistical analysis for timeseries
-
-### Version 0.5
 * Multilap timer
-
-### Version 0.6
 * Timeseries for multilap timer
