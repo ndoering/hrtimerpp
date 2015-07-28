@@ -39,6 +39,14 @@
 #include <time.h>
 #include <cmath>
 
+/**
+ * \brief This class stores times.
+ *
+ * It is used by the Timer class to store its start and stop times. It can also
+ * be used to generate timestamps without the use of the Timer class.
+ *
+ * \attention This class is \b NOT reentrant and \b NOT thread-safe.
+ */
 class Timestamp {
 public:
     /**

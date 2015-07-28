@@ -13,10 +13,10 @@ This library provides a class based interface for high resolution timers for C++
 * Timestamps (done)
 
 ### Version 0.2
-* Timer (in progress)
+* Timer (done)
 
 ### Version 0.3
-* Timeseries
+* Timeseries (in progress)
 
 ### Version 0.4
 * statistical analysis for timeseries

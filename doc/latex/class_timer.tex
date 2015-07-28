@@ -1,0 +1,506 @@
+\hypertarget{class_timer}{}\section{Timer Class Reference}
+\label{class_timer}\index{Timer@{Timer}}
+
+
+This class implements a simple start/stop timer.  
+
+
+
+
+{\ttfamily \#include $<$Timer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_timer_a7d1cfb6025c20ad0d56fea2e09a169ec}{Timer} (const \hyperlink{class_timer}{Timer} \&orig)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}{$\sim$\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Standard destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_timer_a3a8b5272198d029779dc9302a54305a8}{start} ()
+\begin{DoxyCompactList}\small\item\em Start the timer. \end{DoxyCompactList}\item 
+void \hyperlink{class_timer_a63f0eb44b27402196590a03781515dba}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop a running timer. \end{DoxyCompactList}\item 
+void \hyperlink{class_timer_a9020542d73357a4eef512eefaf57524b}{reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the timer. \end{DoxyCompactList}\item 
+bool \hyperlink{class_timer_adaa7f9265e58b38e26b14476b0374e8d}{is\+Running} () const 
+\begin{DoxyCompactList}\small\item\em Return if the timer is running. \end{DoxyCompactList}\item 
+bool \hyperlink{class_timer_adfcb5289466545f65ccee4ac78737f0a}{is\+Reset} () const 
+\begin{DoxyCompactList}\small\item\em Return if the timer is reset. \end{DoxyCompactList}\item 
+const \hyperlink{class_timestamp}{Timestamp} \hyperlink{class_timer_a7958b8b64dc25572a69d5cdcb93dd86a}{get\+Time} () const 
+\begin{DoxyCompactList}\small\item\em Returns the duration. \end{DoxyCompactList}\item 
+double \hyperlink{class_timer_a17668de61cdcf85572dd93dfcb5c588d}{get\+Time\+In\+Seconds} () const 
+\begin{DoxyCompactList}\small\item\em Returns the elapsed time in seconds. \end{DoxyCompactList}\item 
+double \hyperlink{class_timer_adaa5408463cc315a7e73fe8fc16b1555}{get\+Time\+In\+Milli\+Seconds} () const 
+\begin{DoxyCompactList}\small\item\em Returns the elapsed time in milliseconds. \end{DoxyCompactList}\item 
+double \hyperlink{class_timer_afb1ad817cee7e91d7ecc844c8ec968d6}{get\+Time\+In\+Micro\+Seconds} () const 
+\begin{DoxyCompactList}\small\item\em Returns the elapsed time in microseconds. \end{DoxyCompactList}\item 
+double \hyperlink{class_timer_adc1a77beae35658f37aa45b3340fb2ba}{get\+Time\+In\+Nano\+Seconds} () const 
+\begin{DoxyCompactList}\small\item\em Returns the elapsed time in nanoseconds. \end{DoxyCompactList}\item 
+\hyperlink{class_timer}{Timer} \& \hyperlink{class_timer_ac944712dc0b1f001270aad345e04e872}{operator=} (const \hyperlink{class_timer}{Timer} \&rhs)
+\begin{DoxyCompactList}\small\item\em Assign the values of the other \hyperlink{class_timer}{Timer} to this object. \end{DoxyCompactList}\item 
+const \hyperlink{class_timestamp}{Timestamp} \hyperlink{class_timer_a71b986fae4c288f097c76fae1f44e00f}{operator+} (const \hyperlink{class_timer}{Timer} \&rhs) const 
+\begin{DoxyCompactList}\small\item\em Returns the sum of durations. \end{DoxyCompactList}\item 
+const \hyperlink{class_timestamp}{Timestamp} \hyperlink{class_timer_aa05f4e4b1afcb3378c4a99f9c979fae3}{operator-\/} (const \hyperlink{class_timer}{Timer} \&rhs) const 
+\begin{DoxyCompactList}\small\item\em Returns the difference of durations. \end{DoxyCompactList}\item 
+\hyperlink{class_timer}{Timer} \hyperlink{class_timer_a2ceb9229280ad776ac89df6c4658e729}{operator+=} (const \hyperlink{class_timer}{Timer} \&rhs)=delete
+\item 
+\hyperlink{class_timer}{Timer} \hyperlink{class_timer_ac9ad0dc17b6d149fb56191282a4a3593}{operator-\/=} (const \hyperlink{class_timer}{Timer} \&rhs)=delete
+\item 
+bool \hyperlink{class_timer_ab5775d36312c20e4ae655afdf1bc5b11}{operator==} (const \hyperlink{class_timer}{Timer} \&rhs) const 
+\begin{DoxyCompactList}\small\item\em Checks for equality of duration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_timer_add251d78040374a0355bf894c7372f49}{operator!=} (const \hyperlink{class_timer}{Timer} \&rhs) const 
+\begin{DoxyCompactList}\small\item\em Checks for inequality of duration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_timer_a448bc622243401c737a216a9e9b65a80}{operator$>$=} (const \hyperlink{class_timer}{Timer} \&rhs) const 
+\begin{DoxyCompactList}\small\item\em Checks whether this \hyperlink{class_timer}{Timer} has a bigger or equal duration as the other. \end{DoxyCompactList}\item 
+bool \hyperlink{class_timer_ae8654e7d8f21f31eef1af32d81380ff5}{operator$>$} (const \hyperlink{class_timer}{Timer} \&rhs) const 
+\begin{DoxyCompactList}\small\item\em Checks whether this \hyperlink{class_timer}{Timer} has a bigger duration as the other. \end{DoxyCompactList}\item 
+bool \hyperlink{class_timer_a49d50769cf2aac1c3684bca31da707b1}{operator$<$=} (const \hyperlink{class_timer}{Timer} \&rhs) const 
+\begin{DoxyCompactList}\small\item\em Checks whether this \hyperlink{class_timer}{Timer} has a smaller or equal duration as the other. \end{DoxyCompactList}\item 
+bool \hyperlink{class_timer_af2d482584aebf42cd7ce8d4199ac80ad}{operator$<$} (const \hyperlink{class_timer}{Timer} \&rhs) const 
+\begin{DoxyCompactList}\small\item\em Checks whether this \hyperlink{class_timer}{Timer} has a bigger duration as the other. \end{DoxyCompactList}\item 
+bool \hyperlink{class_timer_ad48f2139d1a9196bd5e152d0faa59cfb}{is\+Equal} (const \hyperlink{class_timer}{Timer} \&rhs) const 
+\begin{DoxyCompactList}\small\item\em Checks for the equality of the duration and start ans stop times. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a simple start/stop timer. 
+
+A \hyperlink{class_timer}{Timer} combines two Timestamps, one for the start time and one for the stop time.
+
+\begin{DoxyAttention}{Attention}
+This class is {\bfseries N\+O\+T} reentrant and {\bfseries N\+O\+T} thread-\/safe. 
+\end{DoxyAttention}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{}\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\subsubsection[{Timer}]{\setlength{\rightskip}{0pt plus 5cm}Timer\+::\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_timer_a5f16e8da27d2a5a5242dead46de05d97}
+
+
+Default constructor. 
+
+Creates two Timestamps which are set to zero. \hypertarget{class_timer_a7d1cfb6025c20ad0d56fea2e09a169ec}{}\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\subsubsection[{Timer}]{\setlength{\rightskip}{0pt plus 5cm}Timer\+::\+Timer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{orig}
+\end{DoxyParamCaption}
+)}\label{class_timer_a7d1cfb6025c20ad0d56fea2e09a169ec}
+
+
+Copy constructor. 
+
+Creates an exact replica of the original \hyperlink{class_timer}{Timer}. Since all variables are based on the stack, the both objects are fully independent. 
+\begin{DoxyParams}{Parameters}
+{\em orig} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}{}\index{Timer@{Timer}!````~Timer@{$\sim$\+Timer}}
+\index{````~Timer@{$\sim$\+Timer}!Timer@{Timer}}
+\subsubsection[{$\sim$\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}Timer\+::$\sim$\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}
+
+
+Standard destructor. 
+
+Since all variables are on the stack, nothing is done here. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_timer_a7958b8b64dc25572a69d5cdcb93dd86a}{}\index{Timer@{Timer}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Timer@{Timer}}
+\subsubsection[{get\+Time}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Timestamp} Timer\+::get\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_timer_a7958b8b64dc25572a69d5cdcb93dd86a}
+
+
+Returns the duration. 
+
+This method returns a \hyperlink{class_timestamp}{Timestamp} object holding the duration of the timer. If the timer is running, this means the time elapsed from the start of this \hyperlink{class_timer}{Timer} upto now. The \hyperlink{class_timer}{Timer} keeps on running.
+
+\begin{DoxyAttention}{Attention}
+This does not stop the \hyperlink{class_timer}{Timer}. 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_afb1ad817cee7e91d7ecc844c8ec968d6}{}\index{Timer@{Timer}!get\+Time\+In\+Micro\+Seconds@{get\+Time\+In\+Micro\+Seconds}}
+\index{get\+Time\+In\+Micro\+Seconds@{get\+Time\+In\+Micro\+Seconds}!Timer@{Timer}}
+\subsubsection[{get\+Time\+In\+Micro\+Seconds}]{\setlength{\rightskip}{0pt plus 5cm}double Timer\+::get\+Time\+In\+Micro\+Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_timer_afb1ad817cee7e91d7ecc844c8ec968d6}
+
+
+Returns the elapsed time in microseconds. 
+
+\begin{DoxyAttention}{Attention}
+Due to the limited precission of a double variable, this can be inaccurate. 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_adaa5408463cc315a7e73fe8fc16b1555}{}\index{Timer@{Timer}!get\+Time\+In\+Milli\+Seconds@{get\+Time\+In\+Milli\+Seconds}}
+\index{get\+Time\+In\+Milli\+Seconds@{get\+Time\+In\+Milli\+Seconds}!Timer@{Timer}}
+\subsubsection[{get\+Time\+In\+Milli\+Seconds}]{\setlength{\rightskip}{0pt plus 5cm}double Timer\+::get\+Time\+In\+Milli\+Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_timer_adaa5408463cc315a7e73fe8fc16b1555}
+
+
+Returns the elapsed time in milliseconds. 
+
+\begin{DoxyAttention}{Attention}
+Due to the limited precission of a double variable, this can be inaccurate. 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_adc1a77beae35658f37aa45b3340fb2ba}{}\index{Timer@{Timer}!get\+Time\+In\+Nano\+Seconds@{get\+Time\+In\+Nano\+Seconds}}
+\index{get\+Time\+In\+Nano\+Seconds@{get\+Time\+In\+Nano\+Seconds}!Timer@{Timer}}
+\subsubsection[{get\+Time\+In\+Nano\+Seconds}]{\setlength{\rightskip}{0pt plus 5cm}double Timer\+::get\+Time\+In\+Nano\+Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_timer_adc1a77beae35658f37aa45b3340fb2ba}
+
+
+Returns the elapsed time in nanoseconds. 
+
+\begin{DoxyAttention}{Attention}
+Due to the limited precission of a double variable, this can be inaccurate. 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_a17668de61cdcf85572dd93dfcb5c588d}{}\index{Timer@{Timer}!get\+Time\+In\+Seconds@{get\+Time\+In\+Seconds}}
+\index{get\+Time\+In\+Seconds@{get\+Time\+In\+Seconds}!Timer@{Timer}}
+\subsubsection[{get\+Time\+In\+Seconds}]{\setlength{\rightskip}{0pt plus 5cm}double Timer\+::get\+Time\+In\+Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_timer_a17668de61cdcf85572dd93dfcb5c588d}
+
+
+Returns the elapsed time in seconds. 
+
+\begin{DoxyAttention}{Attention}
+Due to the limited precission of a double variable, this can be inaccurate. 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_ad48f2139d1a9196bd5e152d0faa59cfb}{}\index{Timer@{Timer}!is\+Equal@{is\+Equal}}
+\index{is\+Equal@{is\+Equal}!Timer@{Timer}}
+\subsubsection[{is\+Equal}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::is\+Equal (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\label{class_timer_ad48f2139d1a9196bd5e152d0faa59cfb}
+
+
+Checks for the equality of the duration and start ans stop times. 
+
+While the ==-\/operator only checks the duration, this method also checks if the start time and the stop time is the same. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_adfcb5289466545f65ccee4ac78737f0a}{}\index{Timer@{Timer}!is\+Reset@{is\+Reset}}
+\index{is\+Reset@{is\+Reset}!Timer@{Timer}}
+\subsubsection[{is\+Reset}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::is\+Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_timer_adfcb5289466545f65ccee4ac78737f0a}
+
+
+Return if the timer is reset. 
+
+\begin{DoxyReturn}{Returns}
+true, if reset, false, if not reset 
+\end{DoxyReturn}
+\hypertarget{class_timer_adaa7f9265e58b38e26b14476b0374e8d}{}\index{Timer@{Timer}!is\+Running@{is\+Running}}
+\index{is\+Running@{is\+Running}!Timer@{Timer}}
+\subsubsection[{is\+Running}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::is\+Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_timer_adaa7f9265e58b38e26b14476b0374e8d}
+
+
+Return if the timer is running. 
+
+\begin{DoxyReturn}{Returns}
+true, if running, false, if not running 
+\end{DoxyReturn}
+\hypertarget{class_timer_add251d78040374a0355bf894c7372f49}{}\index{Timer@{Timer}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Timer@{Timer}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\label{class_timer_add251d78040374a0355bf894c7372f49}
+
+
+Checks for inequality of duration. 
+
+This is the opposite of the check for equality. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_a71b986fae4c288f097c76fae1f44e00f}{}\index{Timer@{Timer}!operator+@{operator+}}
+\index{operator+@{operator+}!Timer@{Timer}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Timestamp} Timer\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\label{class_timer_a71b986fae4c288f097c76fae1f44e00f}
+
+
+Returns the sum of durations. 
+
+This method adds the durations of both \hyperlink{class_timer}{Timer} objects and returns it as an \hyperlink{class_timestamp}{Timestamp}. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_a2ceb9229280ad776ac89df6c4658e729}{}\index{Timer@{Timer}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Timer@{Timer}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timer} Timer\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{class_timer_a2ceb9229280ad776ac89df6c4658e729}
+This operator is deleted since it makes no sense.
+
+Since the both Timers might have different start and stop times, it is not meaningful to add the second to the first one. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_aa05f4e4b1afcb3378c4a99f9c979fae3}{}\index{Timer@{Timer}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Timer@{Timer}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Timestamp} Timer\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\label{class_timer_aa05f4e4b1afcb3378c4a99f9c979fae3}
+
+
+Returns the difference of durations. 
+
+This method subtracts the durations of both \hyperlink{class_timer}{Timer} objects and returns it as an \hyperlink{class_timestamp}{Timestamp}. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_ac9ad0dc17b6d149fb56191282a4a3593}{}\index{Timer@{Timer}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Timer@{Timer}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timer} Timer\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{class_timer_ac9ad0dc17b6d149fb56191282a4a3593}
+This operator is deleted since it makes no sense.
+
+Since the both Timers might have different start and stop times, it is not meaningful to subtract the second to the first one. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_af2d482584aebf42cd7ce8d4199ac80ad}{}\index{Timer@{Timer}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Timer@{Timer}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\label{class_timer_af2d482584aebf42cd7ce8d4199ac80ad}
+
+
+Checks whether this \hyperlink{class_timer}{Timer} has a bigger duration as the other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_a49d50769cf2aac1c3684bca31da707b1}{}\index{Timer@{Timer}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Timer@{Timer}}
+\subsubsection[{operator$<$=}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\label{class_timer_a49d50769cf2aac1c3684bca31da707b1}
+
+
+Checks whether this \hyperlink{class_timer}{Timer} has a smaller or equal duration as the other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_ac944712dc0b1f001270aad345e04e872}{}\index{Timer@{Timer}!operator=@{operator=}}
+\index{operator=@{operator=}!Timer@{Timer}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timer} \& Timer\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\label{class_timer_ac944712dc0b1f001270aad345e04e872}
+
+
+Assign the values of the other \hyperlink{class_timer}{Timer} to this object. 
+
+This method assigns the values of the Timestamps to this \hyperlink{class_timer}{Timer}. Also the state of running. Afterwards both \hyperlink{class_timer}{Timer} are completely independent, since all the variables are hold on the stack. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_ab5775d36312c20e4ae655afdf1bc5b11}{}\index{Timer@{Timer}!operator==@{operator==}}
+\index{operator==@{operator==}!Timer@{Timer}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\label{class_timer_ab5775d36312c20e4ae655afdf1bc5b11}
+
+
+Checks for equality of duration. 
+
+This method first checks if the objects are the same. If not, the duration of both Timers are checked whether they differ significantly or not. Since double precission variables tend to be inaccurate in the last digits of its fractional part. Therefore they are not checked for equality but if they differ in the margin of error. I assume an error margin of 10e-\/08 is suitable. You can adjust this with the macro H\+R\+T\+P\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+A\+R\+G\+I\+N 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_ae8654e7d8f21f31eef1af32d81380ff5}{}\index{Timer@{Timer}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Timer@{Timer}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\label{class_timer_ae8654e7d8f21f31eef1af32d81380ff5}
+
+
+Checks whether this \hyperlink{class_timer}{Timer} has a bigger duration as the other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_a448bc622243401c737a216a9e9b65a80}{}\index{Timer@{Timer}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Timer@{Timer}}
+\subsubsection[{operator$>$=}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timer} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\label{class_timer_a448bc622243401c737a216a9e9b65a80}
+
+
+Checks whether this \hyperlink{class_timer}{Timer} has a bigger or equal duration as the other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_timer_a9020542d73357a4eef512eefaf57524b}{}\index{Timer@{Timer}!reset@{reset}}
+\index{reset@{reset}!Timer@{Timer}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_timer_a9020542d73357a4eef512eefaf57524b}
+
+
+Reset the timer. 
+
+This method resets the timer. It will reset every timer, whether is running or not. \hypertarget{class_timer_a3a8b5272198d029779dc9302a54305a8}{}\index{Timer@{Timer}!start@{start}}
+\index{start@{start}!Timer@{Timer}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_timer_a3a8b5272198d029779dc9302a54305a8}
+
+
+Start the timer. 
+
+The \hyperlink{class_timer}{Timer} can only be started if it is not already started and has not been run allready.
+
+\begin{DoxyAttention}{Attention}
+This method fails silently. The user has to check if this \hyperlink{class_timer}{Timer} is able to be started. 
+\end{DoxyAttention}
+\hypertarget{class_timer_a63f0eb44b27402196590a03781515dba}{}\index{Timer@{Timer}!stop@{stop}}
+\index{stop@{stop}!Timer@{Timer}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_timer_a63f0eb44b27402196590a03781515dba}
+
+
+Stop a running timer. 
+
+The \hyperlink{class_timer}{Timer} will be stopped if it was running.
+
+\begin{DoxyAttention}{Attention}
+This method fails silently. The user has to check if the timer is running and is able to be stopped. 
+\end{DoxyAttention}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Timer.\+h\item 
+src/Timer.\+cpp\end{DoxyCompactItemize}

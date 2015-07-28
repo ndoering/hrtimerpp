@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "hrtimerpp", "index.html", [
+  [ "HRTimerpp", "index.html", [
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
@@ -17,7 +17,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_timestamp_8h_source.html"
+"_timer_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
