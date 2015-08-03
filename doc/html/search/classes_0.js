@@ -1,6 +1,0 @@
-var searchData=
-[
-  ['timer',['Timer',['../class_timer.html',1,'']]],
-  ['timerseries',['Timerseries',['../class_timerseries.html',1,'']]],
-  ['timestamp',['Timestamp',['../class_timestamp.html',1,'']]]
-];
