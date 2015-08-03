@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">HRTimerpp
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">0.3</span>
    </div>
    <div id="projectbrief">High resolution timer for Linux systemswritten in C++.</div>
   </td>
@@ -180,6 +180,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:ab6a38b57c0e65dcf39137d82513d81a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36de4415829b2ac7abac8f348b6c6460"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timestamp.html#a36de4415829b2ac7abac8f348b6c6460">setNow</a> ()</td></tr>
 <tr class="separator:a36de4415829b2ac7abac8f348b6c6460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc40542ebc821b4607386970b7d9ae1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timestamp.html#a2bc40542ebc821b4607386970b7d9ae1">getFrequency</a> () const </td></tr>
+<tr class="memdesc:a2bc40542ebc821b4607386970b7d9ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the frequency resulting from the <a class="el" href="class_timestamp.html" title="This class stores times. ">Timestamp</a>.  <a href="#a2bc40542ebc821b4607386970b7d9ae1">More...</a><br /></td></tr>
+<tr class="separator:a2bc40542ebc821b4607386970b7d9ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class stores times. </p>
@@ -312,6 +315,24 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2bc40542ebc821b4607386970b7d9ae1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Timestamp::getFrequency </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the frequency resulting from the <a class="el" href="class_timestamp.html" title="This class stores times. ">Timestamp</a>. </p>
+<p>This returns 1/s. Therefore its unit is Hertz(Hz). Returns 0, if the <a class="el" href="class_timestamp.html" title="This class stores times. ">Timestamp</a> is 0. </p>
+
+</div>
+</div>
 <a class="anchor" id="a3aa18c0e8428f94c23f17be60486bcb7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -324,7 +345,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns only the nanoseconds part of the time. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Returns only the nanoseconds part of the time. </p>
 
 </div>
 </div>
@@ -340,7 +361,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returning only the seconds part of the time. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Returning only the seconds part of the time. </p>
 
 </div>
 </div>
@@ -358,7 +379,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 <p>Returns the time in seconds as a double.</p>
 <dl class="section attention"><dt>Attention</dt><dd>There is a possible loss of accuracy due to the precission of double variables. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -374,7 +394,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the structure holding the time. It is defined in the time.h header file. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Returns the structure holding the time. It is defined in the time.h header file. </p>
 
 </div>
 </div>
@@ -397,7 +417,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -421,7 +440,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -445,7 +463,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -469,7 +486,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -493,7 +509,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -516,7 +531,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -539,7 +553,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -564,7 +577,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -587,7 +599,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -610,7 +621,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -633,7 +643,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -716,7 +725,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>

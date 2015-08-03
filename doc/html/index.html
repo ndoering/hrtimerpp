@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">HRTimerpp
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">0.3</span>
    </div>
    <div id="projectbrief">High resolution timer for Linux systemswritten in C++.</div>
   </td>
@@ -104,35 +104,20 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="contents">
 <div class="textblock"><p>A high resolution timer for Linux systems written in C++.</p>
 <p>This library provides a class based interface for high resolution timers for C++. The goal is to have a usable set of class for the needs of time measuring and statistical analysis for series of an arbitrary number of measurements.</p>
+<p>This code respects the version numbering system "Semantic Versioning 2.0.0", as described here: <a href="http://semver.org/">semver.org</a></p>
 <h2>Requirements</h2>
 <ul>
 <li>Linux kernel (Version &gt;= 2.6)</li>
 <li>CMake (Version &gt;= 2.8)</li>
+<li>Doxygen (Version &gt;= 2.9), for documentation</li>
 </ul>
 <h2>Roadmap</h2>
-<h3>Version 0.1</h3>
 <ul>
-<li>Timestamps (done)</li>
-</ul>
-<h3>Version 0.2</h3>
-<ul>
-<li><a class="el" href="class_timer.html" title="This class implements a simple start/stop timer. ">Timer</a> (done)</li>
-</ul>
-<h3>Version 0.3</h3>
-<ul>
-<li>Timeseries (in progress)</li>
-</ul>
-<h3>Version 0.4</h3>
-<ul>
-<li>statistical analysis for timeseries</li>
-</ul>
-<h3>Version 0.5</h3>
-<ul>
+<li>statistical analysis for <a class="el" href="class_timerseries.html" title="This class stores series of Timer. ">Timerseries</a></li>
+<li>Export of <a class="el" href="class_timer.html" title="This class implements a simple start/stop timer. ">Timer</a> and <a class="el" href="class_timerseries.html" title="This class stores series of Timer. ">Timerseries</a></li>
+<li>Import of <a class="el" href="class_timer.html" title="This class implements a simple start/stop timer. ">Timer</a> and <a class="el" href="class_timerseries.html" title="This class stores series of Timer. ">Timerseries</a></li>
 <li>Multilap timer</li>
-</ul>
-<h3>Version 0.6</h3>
-<ul>
-<li>Timeseries for multilap timer </li>
+<li><a class="el" href="class_timerseries.html" title="This class stores series of Timer. ">Timerseries</a> for multilap timer </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

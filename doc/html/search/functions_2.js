@@ -1,14 +1,20 @@
 var searchData=
 [
-  ['operator_21_3d',['operator!=',['../class_timestamp.html#ad64979a3dc3387f1feb1cf76a1e001bf',1,'Timestamp::operator!=()'],['../class_timer.html#add251d78040374a0355bf894c7372f49',1,'Timer::operator!=()']]],
-  ['operator_2b',['operator+',['../class_timestamp.html#a8a2196e9f83869e3c4c13eae0b610353',1,'Timestamp::operator+()'],['../class_timer.html#a71b986fae4c288f097c76fae1f44e00f',1,'Timer::operator+()']]],
-  ['operator_2b_3d',['operator+=',['../class_timestamp.html#a75b30341805c05e8875b9f0caaaa5f1d',1,'Timestamp::operator+=()'],['../class_timer.html#a2ceb9229280ad776ac89df6c4658e729',1,'Timer::operator+=()']]],
-  ['operator_2d',['operator-',['../class_timestamp.html#a92f658880325e560dca3b96f21f13be4',1,'Timestamp::operator-()'],['../class_timer.html#aa05f4e4b1afcb3378c4a99f9c979fae3',1,'Timer::operator-()']]],
-  ['operator_2d_3d',['operator-=',['../class_timestamp.html#ad8ac2cf2eebb081ba04f61f1663373f7',1,'Timestamp::operator-=()'],['../class_timer.html#ac9ad0dc17b6d149fb56191282a4a3593',1,'Timer::operator-=()']]],
-  ['operator_3c',['operator&lt;',['../class_timestamp.html#a2f0739b9dd635edba62c42cea65c387b',1,'Timestamp::operator&lt;()'],['../class_timer.html#af2d482584aebf42cd7ce8d4199ac80ad',1,'Timer::operator&lt;()']]],
-  ['operator_3c_3d',['operator&lt;=',['../class_timestamp.html#a63e2e0474bbe971c2db2ab726408d203',1,'Timestamp::operator&lt;=()'],['../class_timer.html#a49d50769cf2aac1c3684bca31da707b1',1,'Timer::operator&lt;=()']]],
-  ['operator_3d',['operator=',['../class_timestamp.html#ae97a897474c2a0b3c14b96c21bcddb12',1,'Timestamp::operator=()'],['../class_timer.html#ac944712dc0b1f001270aad345e04e872',1,'Timer::operator=()']]],
-  ['operator_3d_3d',['operator==',['../class_timestamp.html#ab3aeec868b34b270b40dde4d0154b3ae',1,'Timestamp::operator==()'],['../class_timer.html#ab5775d36312c20e4ae655afdf1bc5b11',1,'Timer::operator==()']]],
-  ['operator_3e',['operator&gt;',['../class_timestamp.html#a317c3ee11406c668d30aaf27651e1237',1,'Timestamp::operator&gt;()'],['../class_timer.html#ae8654e7d8f21f31eef1af32d81380ff5',1,'Timer::operator&gt;()']]],
-  ['operator_3e_3d',['operator&gt;=',['../class_timestamp.html#a88f7835430f39681c59400736f83a4b9',1,'Timestamp::operator&gt;=()'],['../class_timer.html#a448bc622243401c737a216a9e9b65a80',1,'Timer::operator&gt;=()']]]
+  ['getalltimer',['getAllTimer',['../class_timerseries.html#a66a9089710288937b95880fcbb934a4a',1,'Timerseries']]],
+  ['getfrequencies',['getFrequencies',['../class_timerseries.html#acb97d189ad9af9d020939a9be904f695',1,'Timerseries']]],
+  ['getfrequency',['getFrequency',['../class_timestamp.html#a2bc40542ebc821b4607386970b7d9ae1',1,'Timestamp::getFrequency()'],['../class_timer.html#af9bd53e42fcc52d22ac054e885456b47',1,'Timer::getFrequency()']]],
+  ['getnanoseconds',['getNanoSeconds',['../class_timestamp.html#a3aa18c0e8428f94c23f17be60486bcb7',1,'Timestamp']]],
+  ['getseconds',['getSeconds',['../class_timestamp.html#abf44ca7ba401217cf6f894efc76696e5',1,'Timestamp']]],
+  ['getsize',['getSize',['../class_timerseries.html#af72e91bdc79fa527ddba4e4e9379b43d',1,'Timerseries']]],
+  ['gettime',['getTime',['../class_timestamp.html#a080012781d6ba5df8e46ce71a42745e2',1,'Timestamp::getTime()'],['../class_timer.html#a7958b8b64dc25572a69d5cdcb93dd86a',1,'Timer::getTime()']]],
+  ['gettimeinmicroseconds',['getTimeInMicroSeconds',['../class_timer.html#afb1ad817cee7e91d7ecc844c8ec968d6',1,'Timer']]],
+  ['gettimeinmilliseconds',['getTimeInMilliSeconds',['../class_timer.html#adaa5408463cc315a7e73fe8fc16b1555',1,'Timer']]],
+  ['gettimeinnanoseconds',['getTimeInNanoSeconds',['../class_timer.html#adc1a77beae35658f37aa45b3340fb2ba',1,'Timer']]],
+  ['gettimeinseconds',['getTimeInSeconds',['../class_timer.html#a17668de61cdcf85572dd93dfcb5c588d',1,'Timer']]],
+  ['gettimes',['getTimes',['../class_timerseries.html#ada4dedeac2d2c3d20a9b2ff7292b8a85',1,'Timerseries']]],
+  ['gettimesinmicroseconds',['getTimesInMicroSeconds',['../class_timerseries.html#ab34c017dc9359e4d7a3ff6863db37475',1,'Timerseries']]],
+  ['gettimesinmilliseconds',['getTimesInMilliSeconds',['../class_timerseries.html#ae9f143cbbe52a88cdc59c88c81c87258',1,'Timerseries']]],
+  ['gettimesinnanoseconds',['getTimesInNanoSeconds',['../class_timerseries.html#ab837ceccadd7ded02be32dbb3b8443d6',1,'Timerseries']]],
+  ['gettimesinseconds',['getTimesInSeconds',['../class_timerseries.html#aaa041b22c9c410d42e3cc1ce578f7245',1,'Timerseries']]],
+  ['gettimestamp',['getTimestamp',['../class_timestamp.html#a103ca3563060c6d85e3c020417a7af2b',1,'Timestamp']]]
 ];

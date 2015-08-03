@@ -3,6 +3,7 @@ var class_timer =
     [ "Timer", "class_timer.html#a5f16e8da27d2a5a5242dead46de05d97", null ],
     [ "Timer", "class_timer.html#a7d1cfb6025c20ad0d56fea2e09a169ec", null ],
     [ "~Timer", "class_timer.html#a14fa469c4c295c5fa6e66a4ad1092146", null ],
+    [ "getFrequency", "class_timer.html#af9bd53e42fcc52d22ac054e885456b47", null ],
     [ "getTime", "class_timer.html#a7958b8b64dc25572a69d5cdcb93dd86a", null ],
     [ "getTimeInMicroSeconds", "class_timer.html#afb1ad817cee7e91d7ecc844c8ec968d6", null ],
     [ "getTimeInMilliSeconds", "class_timer.html#adaa5408463cc315a7e73fe8fc16b1555", null ],

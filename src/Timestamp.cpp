@@ -286,3 +286,21 @@ bool Timestamp::operator <=(const Timestamp& rhs) const {
 void Timestamp::setNow() {
     clock_gettime(CLOCK_REALTIME, &this->mTimestamp);
 }
+
+/*
+ * This returns a double precission variable containing the frequency, which
+ * results from the timestamp. The unit is Hertz(Hz). If the time is zero, the
+ * frequency returned will be 0.
+ */
+double Timestamp::getFrequency() const {
+    double time = this->getTime();
+    double frequency;
+
+    if(time != 0.0) {
+        frequency = 1.0 / time;
+    } else {
+        frequency = 0.0;
+    }
+
+    return frequency;
+}

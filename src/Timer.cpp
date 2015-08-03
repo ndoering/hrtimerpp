@@ -304,3 +304,21 @@ double Timer::getTimeInNanoSeconds() const {
 
     return timeInNanoSeconds;
 }
+
+/*
+ * This returns a double precission variable containing the frequency, which
+ * results from the time the Timer was running. The unit is Hertz(Hz). If the
+ * Timer was not run, the frequency returned will be 0.
+ */
+double Timer::getFrequency() const {
+    double time = this->getTimeInSeconds();
+    double frequency;
+
+    if(time != 0.0) {
+        frequency = 1.0 / time;
+    } else {
+        frequency = 0.0;
+    }
+
+    return frequency;
+}

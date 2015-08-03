@@ -6,6 +6,7 @@ var class_timestamp =
     [ "Timestamp", "class_timestamp.html#a0d786922f934586038c340ba1504ad0f", null ],
     [ "Timestamp", "class_timestamp.html#a3816f44498d5e62bb3adeb502c7f08fa", null ],
     [ "~Timestamp", "class_timestamp.html#ae1fc6b2bb504bc0d1536603228f1d493", null ],
+    [ "getFrequency", "class_timestamp.html#a2bc40542ebc821b4607386970b7d9ae1", null ],
     [ "getNanoSeconds", "class_timestamp.html#a3aa18c0e8428f94c23f17be60486bcb7", null ],
     [ "getSeconds", "class_timestamp.html#abf44ca7ba401217cf6f894efc76696e5", null ],
     [ "getTime", "class_timestamp.html#a080012781d6ba5df8e46ce71a42745e2", null ],

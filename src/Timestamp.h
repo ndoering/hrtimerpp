@@ -102,35 +102,30 @@ public:
      * This is actually a deep copy. All variables and therefore the objects
      * stay independent.
      * @param rhs
-     * @return
      */
     Timestamp& operator=(const Timestamp& rhs);
 
     /**
      * \attention No overflow checking.
      * @param rhs
-     * @return
      */
     Timestamp& operator+=(const Timestamp& rhs);
 
     /**
      * \attention No overflow checking.
      * @param rhs
-     * @return
      */
     Timestamp& operator-=(const Timestamp& rhs);
 
     /**
      * \attention No overflow checking.
      * @param rhs
-     * @return
      */
     const Timestamp operator+(const Timestamp& rhs) const;
 
     /**
      * \attention No overflow checking.
      * @param rhs
-     * @return
      */
     const Timestamp operator-(const Timestamp& rhs) const;
 
@@ -138,61 +133,52 @@ public:
      * Checks if the both objects are the same or of the same age, i.e. have the
      * same values for seconds and nanoseconds.
      * @param rhs
-     * @return
      */
     bool operator==(const Timestamp& rhs) const;
 
     /**
      * Checks for inequality of both values.
      * @param rhs
-     * @return
      */
     bool operator!=(const Timestamp& rhs) const;
 
     /**
      * Checks whether this object is newer as the other.
      * @param rhs
-     * @return
      */
     bool operator>(const Timestamp& rhs) const;
 
     /**
      * Checks whether this object is newer or of the same age as the other.
      * @param rhs
-     * @return
      */
     bool operator>=(const Timestamp& rhs) const;
 
     /**
      * Checks whether this object is older as the other.
      * @param rhs
-     * @return
      */
     bool operator<(const Timestamp& rhs) const;
 
     /**
      * Checks whether this object is older or of the same age as the other.
      * @param rhs
-     * @return
      */
     bool operator<=(const Timestamp& rhs) const;
 
     /**
      * Returns the structure holding the time. It is defined in the time.h
      * header file.
-     * @return
      */
     struct timespec getTimestamp() const;
 
     /**
      * Returning only the seconds part of the time.
-     * @return
      */
     long getSeconds() const;
 
     /**
      * Returns only the nanoseconds part of the time.
-     * @return
      */
     long getNanoSeconds() const;
 
@@ -201,7 +187,6 @@ public:
      *
      * \attention There is a possible loss of accuracy due to the precission of
      * double variables.
-     * @return
      */
     double getTime() const;
 
@@ -237,7 +222,6 @@ public:
      * accordingly.
      *
      * @param nanoseconds
-     * @return
      */
     long setNanoSeconds(const long nanoseconds);
 
@@ -245,6 +229,14 @@ public:
      * Sets the time to the current time.
      */
     void setNow();
+
+    /**
+     * \brief Returns the frequency resulting from the Timestamp.
+     *
+     * This returns 1/s. Therefore its unit is Hertz(Hz). Returns 0, if the
+     * Timestamp is 0.
+     */
+    double getFrequency() const;
 
 private:
     struct timespec mTimestamp;

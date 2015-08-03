@@ -11,7 +11,8 @@ This code respects the version numbering system "Semantic Versioning 2.0.0", as 
 * Doxygen (Version >= 2.9), for documentation
 
 ## Roadmap
-* Timeseries (in progress)
-* statistical analysis for timeseries
+* statistical analysis for Timerseries
+* Export of Timer and Timerseries
+* Import of Timer and Timerseries
 * Multilap timer
-* Timeseries for multilap timer
+* Timerseries for multilap timer

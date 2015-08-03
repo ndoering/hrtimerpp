@@ -38,6 +38,6 @@
 
 #include "hrtimerpp/Timestamp.h"
 #include "hrtimerpp/Timer.h"
+#include "hrtimerpp/Timerseries.h"
 
 #endif	/* HRTIMERPP_H */
-

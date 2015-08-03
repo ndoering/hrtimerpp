@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">HRTimerpp
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">0.3</span>
    </div>
    <div id="projectbrief">High resolution timer for Linux systemswritten in C++.</div>
   </td>
@@ -138,11 +138,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9020542d73357a4eef512eefaf57524b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#a9020542d73357a4eef512eefaf57524b">reset</a> ()</td></tr>
 <tr class="memdesc:a9020542d73357a4eef512eefaf57524b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the timer.  <a href="#a9020542d73357a4eef512eefaf57524b">More...</a><br /></td></tr>
 <tr class="separator:a9020542d73357a4eef512eefaf57524b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaa7f9265e58b38e26b14476b0374e8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#adaa7f9265e58b38e26b14476b0374e8d">isRunning</a> () const </td></tr>
-<tr class="memdesc:adaa7f9265e58b38e26b14476b0374e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if the timer is running.  <a href="#adaa7f9265e58b38e26b14476b0374e8d">More...</a><br /></td></tr>
+<tr class="memitem:adaa7f9265e58b38e26b14476b0374e8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adaa7f9265e58b38e26b14476b0374e8d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#adaa7f9265e58b38e26b14476b0374e8d">isRunning</a> () const </td></tr>
+<tr class="memdesc:adaa7f9265e58b38e26b14476b0374e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if the timer is running. <br /></td></tr>
 <tr class="separator:adaa7f9265e58b38e26b14476b0374e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfcb5289466545f65ccee4ac78737f0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#adfcb5289466545f65ccee4ac78737f0a">isReset</a> () const </td></tr>
-<tr class="memdesc:adfcb5289466545f65ccee4ac78737f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if the timer is reset.  <a href="#adfcb5289466545f65ccee4ac78737f0a">More...</a><br /></td></tr>
+<tr class="memitem:adfcb5289466545f65ccee4ac78737f0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfcb5289466545f65ccee4ac78737f0a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#adfcb5289466545f65ccee4ac78737f0a">isReset</a> () const </td></tr>
+<tr class="memdesc:adfcb5289466545f65ccee4ac78737f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if the timer is reset. <br /></td></tr>
 <tr class="separator:adfcb5289466545f65ccee4ac78737f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7958b8b64dc25572a69d5cdcb93dd86a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_timestamp.html">Timestamp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#a7958b8b64dc25572a69d5cdcb93dd86a">getTime</a> () const </td></tr>
 <tr class="memdesc:a7958b8b64dc25572a69d5cdcb93dd86a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the duration.  <a href="#a7958b8b64dc25572a69d5cdcb93dd86a">More...</a><br /></td></tr>
@@ -193,6 +195,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad48f2139d1a9196bd5e152d0faa59cfb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#ad48f2139d1a9196bd5e152d0faa59cfb">isEqual</a> (const <a class="el" href="class_timer.html">Timer</a> &amp;rhs) const </td></tr>
 <tr class="memdesc:ad48f2139d1a9196bd5e152d0faa59cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for the equality of the duration and start ans stop times.  <a href="#ad48f2139d1a9196bd5e152d0faa59cfb">More...</a><br /></td></tr>
 <tr class="separator:ad48f2139d1a9196bd5e152d0faa59cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9bd53e42fcc52d22ac054e885456b47"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#af9bd53e42fcc52d22ac054e885456b47">getFrequency</a> () const </td></tr>
+<tr class="memdesc:af9bd53e42fcc52d22ac054e885456b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the frequency resulting from the time measured.  <a href="#af9bd53e42fcc52d22ac054e885456b47">More...</a><br /></td></tr>
+<tr class="separator:af9bd53e42fcc52d22ac054e885456b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class implements a simple start/stop timer. </p>
@@ -268,6 +273,24 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af9bd53e42fcc52d22ac054e885456b47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Timer::getFrequency </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the frequency resulting from the time measured. </p>
+<p>This returns 1/s. Therefore its unit is Hertz(Hz). Returns 0, if there is no time measured. </p>
+
+</div>
+</div>
 <a class="anchor" id="a7958b8b64dc25572a69d5cdcb93dd86a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +307,6 @@ Public Member Functions</h2></td></tr>
 <p>Returns the duration. </p>
 <p>This method returns a <a class="el" href="class_timestamp.html" title="This class stores times. ">Timestamp</a> object holding the duration of the timer. If the timer is running, this means the time elapsed from the start of this <a class="el" href="class_timer.html" title="This class implements a simple start/stop timer. ">Timer</a> upto now. The <a class="el" href="class_timer.html" title="This class implements a simple start/stop timer. ">Timer</a> keeps on running.</p>
 <dl class="section attention"><dt>Attention</dt><dd>This does not stop the <a class="el" href="class_timer.html" title="This class implements a simple start/stop timer. ">Timer</a>. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -303,7 +325,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the elapsed time in microseconds. </p>
 <dl class="section attention"><dt>Attention</dt><dd>Due to the limited precission of a double variable, this can be inaccurate. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -322,7 +343,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the elapsed time in milliseconds. </p>
 <dl class="section attention"><dt>Attention</dt><dd>Due to the limited precission of a double variable, this can be inaccurate. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -341,7 +361,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the elapsed time in nanoseconds. </p>
 <dl class="section attention"><dt>Attention</dt><dd>Due to the limited precission of a double variable, this can be inaccurate. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -360,7 +379,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the elapsed time in seconds. </p>
 <dl class="section attention"><dt>Attention</dt><dd>Due to the limited precission of a double variable, this can be inaccurate. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -385,43 +403,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="adfcb5289466545f65ccee4ac78737f0a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Timer::isReset </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return if the timer is reset. </p>
-<dl class="section return"><dt>Returns</dt><dd>true, if reset, false, if not reset </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="adaa7f9265e58b38e26b14476b0374e8d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Timer::isRunning </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return if the timer is running. </p>
-<dl class="section return"><dt>Returns</dt><dd>true, if running, false, if not running </dd></dl>
 
 </div>
 </div>
@@ -446,7 +427,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -471,7 +451,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -503,7 +482,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -528,7 +506,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -560,7 +537,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -585,7 +561,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -610,7 +585,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -635,7 +609,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -660,7 +633,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -685,7 +657,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -710,7 +681,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>

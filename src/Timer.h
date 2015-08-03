@@ -106,16 +106,12 @@ public:
 
     /**
      * \brief Return if the timer is running.
-     *
-     * @return true, if running, false, if not running
      */
     bool isRunning() const;
 
 
     /**
      * \brief Return if the timer is reset.
-     *
-     * @return true, if reset, false, if not reset
      */
     bool isReset() const;
 
@@ -127,7 +123,6 @@ public:
      * this Timer upto now. The Timer keeps on running.
      *
      * \attention This does not stop the Timer.
-     * @return
      */
     const Timestamp getTime() const;
 
@@ -136,7 +131,6 @@ public:
      *
      * \attention Due to the limited precission of a double variable, this can
      * be inaccurate.
-     * @return
      */
     double getTimeInSeconds() const;
 
@@ -145,7 +139,6 @@ public:
      *
      * \attention Due to the limited precission of a double variable, this can
      * be inaccurate.
-     * @return
      */
     double getTimeInMilliSeconds() const;
 
@@ -154,7 +147,6 @@ public:
      *
      * \attention Due to the limited precission of a double variable, this can
      * be inaccurate.
-     * @return
      */
     double getTimeInMicroSeconds() const;
 
@@ -163,7 +155,6 @@ public:
      *
      * \attention Due to the limited precission of a double variable, this can
      * be inaccurate.
-     * @return
      */
     double getTimeInNanoSeconds() const;
 
@@ -174,7 +165,6 @@ public:
      * state of running. Afterwards both Timer are completely independent, since
      * all the variables are hold on the stack.
      * @param rhs
-     * @return
      */
     Timer& operator=(const Timer& rhs);
 
@@ -184,7 +174,6 @@ public:
      * This method adds the durations of both Timer objects and returns it as an
      * Timestamp.
      * @param rhs
-     * @return
      */
     const Timestamp operator+(const Timer& rhs) const;
 
@@ -194,7 +183,6 @@ public:
      * This method subtracts the durations of both Timer objects and returns it
      * as an Timestamp.
      * @param rhs
-     * @return
      */
     const Timestamp operator-(const Timer& rhs) const;
 
@@ -204,7 +192,6 @@ public:
      * Since the both Timers might have different start and stop times, it is
      * not meaningful to add the second to the first one.
      * @param rhs
-     * @return
      */
     Timer operator+=(const Timer& rhs) = delete;
 
@@ -214,7 +201,6 @@ public:
      * Since the both Timers might have different start and stop times, it is
      * not meaningful to subtract the second to the first one.
      * @param rhs
-     * @return
      */
     Timer operator-=(const Timer& rhs) = delete;
 
@@ -229,7 +215,6 @@ public:
      * margin of 10e-08 is suitable. You can adjust this with the macro
      * HRTPP_ERROR_MARGIN
      * @param rhs
-     * @return
      */
     bool operator==(const Timer& rhs) const;
 
@@ -238,7 +223,6 @@ public:
      *
      * This is the opposite of the check for equality.
      * @param rhs
-     * @return
      */
     bool operator!=(const Timer& rhs) const;
 
@@ -246,14 +230,12 @@ public:
      * \brief Checks whether this Timer has a bigger or equal duration as the
      * other.
      * @param rhs
-     * @return
      */
     bool operator>=(const Timer& rhs) const;
 
     /**
      * \brief Checks whether this Timer has a bigger duration as the other.
      * @param rhs
-     * @return
      */
     bool operator>(const Timer& rhs) const;
 
@@ -261,14 +243,12 @@ public:
      * \brief Checks whether this Timer has a smaller or equal duration as the
      * other.
      * @param rhs
-     * @return
      */
     bool operator<=(const Timer& rhs) const;
 
     /**
      * \brief Checks whether this Timer has a bigger duration as the other.
      * @param rhs
-     * @return
      */
     bool operator<(const Timer& rhs) const;
 
@@ -278,9 +258,16 @@ public:
      * While the ==-operator only checks the duration, this method also checks
      * if the start time and the stop time is the same.
      * @param rhs
-     * @return
      */
     bool isEqual(const Timer& rhs) const;
+
+    /**
+     * \brief Returns the frequency resulting from the time measured.
+     *
+     * This returns 1/s. Therefore its unit is Hertz(Hz). Returns 0, if there
+     * is no time measured.
+     */
+    double getFrequency() const;
 
 private:
     Timestamp mStartTime, mStopTime;
