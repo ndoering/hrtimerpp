@@ -99,6 +99,16 @@ public:
     Timerseries& operator+=(const Timerseries& rhs);
 
     /**
+     * \brief Adds the given Timer to this series.
+     *
+     * The Timer will not be copied. If the series is destroyed, it will destroy
+     * this timer as well.
+     *
+     * @param timerToAdd
+     */
+    Timerseries& operator+=(Timer* timerToAdd);
+
+    /**
      * \brief This removes all the Timer from this series that are also in the
      * other Timerseries.
      *
@@ -110,11 +120,29 @@ public:
     Timerseries& operator-=(const Timerseries& rhs);
 
     /**
+     * \brief Remove the given Timer from this series.
+     *
+     * @param timerToRemove
+     */
+    Timerseries& operator-=(const Timer& timerToRemove);
+
+    /**
      * \brief Adds both series together an returns the sum of both.
      *
      * @param rhs
      */
     const Timerseries operator+(const Timerseries& rhs);
+
+    /**
+     * \brief This adds a single timer to the a copy of this series and returns
+     * the copy.
+     *
+     * The Timer will not be copied. If the series is destroyed, it will destroy
+     * this timer as well.
+     * 
+     * @param timerToAdd
+     */
+    const Timerseries operator+(Timer* timerToAdd);
 
     /**
      * \brief Subtracts the rhs series from this series and returns the
@@ -125,6 +153,13 @@ public:
      * @param rhs
      */
     const Timerseries operator-(const Timerseries& rhs);
+
+    /**
+     * \brief This subtracts the timer from the timeseries and returns the
+     * remaining Timer a new series.
+     * @param timerToRemove
+     */
+    const Timerseries operator-(const Timer& timerToRemove);
 
     /**
      * \brief Checks if both series consist of equal Timer.
@@ -188,8 +223,12 @@ public:
      * \brief Append the Timer to the Timerseries.
      *
      * This adds the given Timer to the end of the Timerseries.
+     *
+     * \\attention This method is deprecated. Use operator+ and operator+=
+     * instead.
      * @param newTimer
      */
+    [[deprecated("Replaced by operator+ and operator+=")]]
     void addTimer(Timer* newTimer);
 
     /**
@@ -284,7 +323,7 @@ public:
     std::list<double>* getFrequencies() const;
 
 private:
-    std::list<Timer*>* timer;
+    std::list<Timer*>* mTimer;
 
     const std::list<Timer*>& getTimer() const;
 };

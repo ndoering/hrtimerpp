@@ -42,7 +42,7 @@
  * Creates a new object and stores the timers on the heap.
  */
 Timerseries::Timerseries() {
-    this->timer = new std::list<Timer*>();
+    this->mTimer = new std::list<Timer*>();
 }
 
 /*
@@ -50,11 +50,11 @@ Timerseries::Timerseries() {
  * container to make a deep copy of all elements.
  */
 Timerseries::Timerseries(const Timerseries& orig) {
-    this->timer = new std::list<Timer*>();
+    this->mTimer = new std::list<Timer*>();
 
     // for every Timer in origs series, push a copy to this list
-    for(const Timer* timer: *(orig.timer)){
-        this->timer->push_back(new Timer(*timer));
+    for(const Timer* timer: *(orig.mTimer)){
+        this->mTimer->push_back(new Timer(*timer));
     }
 }
 
@@ -63,12 +63,12 @@ Timerseries::Timerseries(const Timerseries& orig) {
  * their destructor.
  */
 Timerseries::~Timerseries() {
-    for(Timer* timer: *(this->timer)){
+    for(Timer* timer: *(this->mTimer)){
         delete timer;
         timer = nullptr;
     }
 
-    delete this->timer;
+    delete this->mTimer;
 }
 
 /*
@@ -81,20 +81,20 @@ Timerseries& Timerseries::operator =(const Timerseries& rhs) {
     }
 
     // delete the existing Timer
-    for(Timer* timer: *(this->timer)){
+    for(Timer* timer: *(this->mTimer)){
         delete timer;
         timer = nullptr;
     }
 
     // delete the list holding the Timer pointer
-    delete this->timer;
+    delete this->mTimer;
 
     // create a new list
-    this->timer = new std::list<Timer*>();
+    this->mTimer = new std::list<Timer*>();
 
     // make a copy for every Timer in the rhs series and store it in this series
-    for(const Timer* timer: *(rhs.timer)){
-        this->timer->push_back(new Timer(*timer));
+    for(const Timer* timer: *(rhs.mTimer)){
+        this->mTimer->push_back(new Timer(*timer));
     }
 
     return *this;
@@ -107,9 +107,19 @@ Timerseries& Timerseries::operator =(const Timerseries& rhs) {
  */
 Timerseries& Timerseries::operator +=(const Timerseries& rhs) {
     // make a copy for every Timer in the rhs series and store it in this series
-    for(const Timer* timer: *(rhs.timer)){
-        this->timer->push_back(new Timer(*timer));
+    for(const Timer* timer: *(rhs.mTimer)){
+        this->mTimer->push_back(new Timer(*timer));
     }
+
+    return *this;
+}
+
+/*
+ * Adds the given timer to this series. It will not be copied. If the series is
+ * destroyed, it will destroy this timer as well.
+ */
+Timerseries& Timerseries::operator +=(Timer* timerToAdd) {
+    this->mTimer->push_back( timerToAdd );
 
     return *this;
 }
@@ -125,9 +135,9 @@ Timerseries& Timerseries::operator -=(const Timerseries& rhs) {
     std::list<Timer*>* toErase = new std::list<Timer*>();
 
     // check for every combination of two Timers in both series
-    for(rhsIt = rhs.timer->begin(); rhsIt != rhs.timer->end(); ++rhsIt){
-        for(thisIt = this->timer->begin();
-                thisIt != this->timer->end(); ++thisIt){
+    for(rhsIt = rhs.mTimer->begin(); rhsIt != rhs.mTimer->end(); ++rhsIt){
+        for(thisIt = this->mTimer->begin();
+                thisIt != this->mTimer->end(); ++thisIt){
 
             // reference Timer for simplicity
             // iterator -*-> Timer* -*-> Timer
@@ -144,13 +154,30 @@ Timerseries& Timerseries::operator -=(const Timerseries& rhs) {
     // delete every Timer that has been marked
     for(Timer* timer: *toErase){
         //remove Timer from list
-        this->timer->remove(timer);
+        this->mTimer->remove(timer);
         //free memory for the Timer
         delete timer;
     }
 
     // free memory for the list of Timer which were to be deleted
     delete toErase;
+    return *this;
+}
+
+/*
+ * This removes a timer and all its copies from this list, by encapsulating it
+ * in a new list and use the method to remove a complete list.
+ */
+Timerseries& Timerseries::operator -=(const Timer& timerToRemove) {
+    /*new list to encapsulate the timer*/
+    Timerseries timersToRemove;
+
+    /*add a copy of the timer to the list*/
+    timersToRemove += new Timer(timerToRemove);
+
+    /*remove the timer from this objects list of timers*/
+    *this -= timersToRemove;
+
     return *this;
 }
 
@@ -166,6 +193,18 @@ const Timerseries Timerseries::operator +(const Timerseries& rhs) {
 }
 
 /*
+ * Add the given timer to this series. This series handles the timer from then
+ * on. If the series is destroyed, it will destroy this timer as well.
+ */
+const Timerseries Timerseries::operator +(Timer* timerToAdd) {
+    Timerseries newTimerseries(*this);
+
+    newTimerseries += timerToAdd;
+
+    return newTimerseries;
+}
+
+/*
  * Creates a new series, which holds only the elements which are in this series
  * and not in rhs.
  */
@@ -173,6 +212,17 @@ const Timerseries Timerseries::operator -(const Timerseries& rhs) {
     Timerseries newTimerseries(*this);
 
     newTimerseries -= rhs;
+
+    return newTimerseries;
+}
+
+/*
+ * Removes the given Timer and all its copies from the list.
+ */
+const Timerseries Timerseries::operator -(const Timer& timerToRemove) {
+    Timerseries newTimerseries(*this);
+
+    newTimerseries -= timerToRemove;
 
     return newTimerseries;
 }
@@ -262,9 +312,9 @@ bool Timerseries::operator >=(const Timerseries& rhs)  const{
     int countEquals = 0;
 
     // check every possible combination of elements of both lists
-    for(rhsIt = rhs.timer->begin(); rhsIt != rhs.timer->end(); ++rhsIt){
-        for(thisIt = this->timer->begin();
-                thisIt != this->timer->end(); ++thisIt){
+    for(rhsIt = rhs.mTimer->begin(); rhsIt != rhs.mTimer->end(); ++rhsIt){
+        for(thisIt = this->mTimer->begin();
+                thisIt != this->mTimer->end(); ++thisIt){
 
             // reference Timer for simplicity
             // iterator -*-> Timer* -*-> Timer
@@ -294,10 +344,11 @@ bool Timerseries::operator <=(const Timerseries& rhs)  const{
 }
 
 /*
- * Add a new and existing Timer to this series.
+ * Add a new and existing Timer to this series. This method is now deprecated.
+ * You can use operator+= and operator+ instead;
  */
 void Timerseries::addTimer(Timer* newTimer) {
-    this->timer->push_back(newTimer);
+    this->mTimer->push_back(newTimer);
 }
 
 /*
@@ -305,7 +356,7 @@ void Timerseries::addTimer(Timer* newTimer) {
  * outside of this class.
  */
 const std::list<Timer*>& Timerseries::getTimer() const{
-    return *(this->timer);
+    return *(this->mTimer);
 }
 
 /*
@@ -316,7 +367,7 @@ std::list<Timer*>* Timerseries::getAllTimer() const{
     std::list<Timer*>* allTimer = new std::list<Timer*>();
 
     // for every Timer in this series, push a copy to the new list
-    for (const Timer* timer : *(this->timer)) {
+    for (const Timer* timer : *(this->mTimer)) {
         allTimer->push_back(new Timer(*timer));
     }
 
@@ -328,7 +379,7 @@ std::list<Timer*>* Timerseries::getAllTimer() const{
  * is not running, nothig happend to it.
  */
 void Timerseries::stopAllTimer() const {
-    for(Timer* timer: *(this->timer)){
+    for(Timer* timer: *(this->mTimer)){
         timer->stop();
     }
 }
@@ -338,14 +389,14 @@ void Timerseries::stopAllTimer() const {
  * Timer. Beware, since this can render pointer invalid.
  */
 void Timerseries::clear() {
-    for(Timer* timer: *(this->timer)){
+    for(Timer* timer: *(this->mTimer)){
         delete timer;
         timer = nullptr;
     }
 
-    delete this->timer;
+    delete this->mTimer;
 
-    this->timer = new std::list<Timer*>();
+    this->mTimer = new std::list<Timer*>();
 }
 
 /*
@@ -353,7 +404,7 @@ void Timerseries::clear() {
  * this Timer is not in the series, nothing happens.
  */
 void Timerseries::removeTimer(Timer* const toDelete) {
-    this->timer->remove(toDelete);
+    this->mTimer->remove(toDelete);
 }
 
 /*
@@ -362,7 +413,7 @@ void Timerseries::removeTimer(Timer* const toDelete) {
 Timer* Timerseries::newTimer() {
     Timer* newTimer = new Timer();
 
-    this->timer->push_back(newTimer);
+    this->mTimer->push_back(newTimer);
 
     return newTimer;
 }
@@ -387,7 +438,7 @@ Timer* Timerseries::newStartedTimer() {
 std::list<Timestamp>* Timerseries::getTimes() const {
     std::list<Timestamp>* times = new std::list<Timestamp>();
 
-    for(const Timer* timer: *(this->timer)){
+    for(const Timer* timer: *(this->mTimer)){
         times->push_back(timer->getTime());
     }
 
@@ -402,7 +453,7 @@ std::list<Timestamp>* Timerseries::getTimes() const {
 std::list<double>* Timerseries::getTimesInSeconds() const {
     std::list<double>* times = new std::list<double>();
 
-    for(const Timer* timer: *(this->timer)){
+    for(const Timer* timer: *(this->mTimer)){
         times->push_back(timer->getTimeInSeconds());
     }
 
@@ -417,7 +468,7 @@ std::list<double>* Timerseries::getTimesInSeconds() const {
 std::list<double>* Timerseries::getTimesInMilliSeconds() const {
     std::list<double>* times = new std::list<double>();
 
-    for(const Timer* timer: *(this->timer)){
+    for(const Timer* timer: *(this->mTimer)){
         times->push_back(timer->getTimeInMilliSeconds());
     }
 
@@ -432,7 +483,7 @@ std::list<double>* Timerseries::getTimesInMilliSeconds() const {
 std::list<double>* Timerseries::getTimesInMicroSeconds() const {
     std::list<double>* times = new std::list<double>();
 
-    for(const Timer* timer: *(this->timer)){
+    for(const Timer* timer: *(this->mTimer)){
         times->push_back(timer->getTimeInMicroSeconds());
     }
 
@@ -447,7 +498,7 @@ std::list<double>* Timerseries::getTimesInMicroSeconds() const {
 std::list<double>* Timerseries::getTimesInNanoSeconds() const {
     std::list<double>* times = new std::list<double>();
 
-    for(const Timer* timer: *(this->timer)){
+    for(const Timer* timer: *(this->mTimer)){
         times->push_back(timer->getTimeInNanoSeconds());
     }
 
@@ -462,7 +513,7 @@ std::list<double>* Timerseries::getTimesInNanoSeconds() const {
 std::list<double>* Timerseries::getFrequencies() const {
     std::list<double>* frequencies = new std::list<double>();
 
-    for(const Timer* timer: *(this->timer)){
+    for(const Timer* timer: *(this->mTimer)){
         frequencies->push_back(timer->getFrequency());
     }
 
@@ -473,5 +524,5 @@ std::list<double>* Timerseries::getFrequencies() const {
  * Returns the number of Timer in this series.
  */
 int Timerseries::getSize() const {
-    return this->timer->size();
+    return this->mTimer->size();
 }
