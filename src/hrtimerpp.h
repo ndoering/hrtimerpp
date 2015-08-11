@@ -36,11 +36,6 @@
 #ifndef HRTIMERPP_H
 #define	HRTIMERPP_H
 
-
-#ifndef HRTPP_ERROR_MARGIN
-#define HRTPP_ERROR_MARGIN 10e-08
-#endif /*HRTPP_ERROR_MARGIN*/
-
 #include "hrtimerpp/Timestamp.h"
 #include "hrtimerpp/Timer.h"
 #include "hrtimerpp/Timerseries.h"

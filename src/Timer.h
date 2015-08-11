@@ -38,6 +38,10 @@
 
 #include "Timestamp.h"
 
+#ifndef HRTPP_ERROR_MARGIN
+#define HRTPP_ERROR_MARGIN 10e-08
+#endif /*HRTPP_ERROR_MARGIN*/
+
 /**
  * \brief This class implements a simple start/stop timer.
  *
