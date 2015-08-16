@@ -36,9 +36,9 @@
 #ifndef HRTIMERPP_H
 #define	HRTIMERPP_H
 
-#include "hrtimerpp/Timestamp.h"
-#include "hrtimerpp/Timer.h"
-#include "hrtimerpp/Timerseries.h"
-#include "hrtimerpp/Statistic.h"
+#include <hrtimerpp/Timestamp.h>
+#include <hrtimerpp/Timer.h>
+#include <hrtimerpp/Timerseries.h>
+#include <hrtimerpp/Statistic.h>
 
 #endif	/* HRTIMERPP_H */
