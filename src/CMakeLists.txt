@@ -6,6 +6,10 @@ add_library (hrtimerpp SHARED
 
 target_link_libraries (hrtimerpp m)
 
+set_target_properties( hrtimerpp
+    PROPERTIES VERSION ${VERSION} SOVERSION ${VERSION_MAJOR}
+)
+
 install (TARGETS hrtimerpp DESTINATION lib)
 install (FILES hrtimerpp.h DESTINATION include)
 install (FILES Timestamp.h DESTINATION include/hrtimerpp)
