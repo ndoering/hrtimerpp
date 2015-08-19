@@ -139,7 +139,7 @@ public:
      *
      * The Timer will not be copied. If the series is destroyed, it will destroy
      * this timer as well.
-     * 
+     *
      * @param timerToAdd
      */
     const Timerseries operator+(Timer* timerToAdd);
@@ -228,7 +228,9 @@ public:
      * instead.
      * @param newTimer
      */
+#ifndef NO_CXX14
     [[deprecated("Replaced by operator+ and operator+=")]]
+#endif
     void addTimer(Timer* newTimer);
 
     /**
@@ -329,4 +331,3 @@ private:
 };
 
 #endif	/* TIMERSERIES_H */
-
