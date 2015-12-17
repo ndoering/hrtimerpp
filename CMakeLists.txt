@@ -2,8 +2,8 @@ cmake_minimum_required (VERSION 2.8)
 
 project (HRTimerpp CXX)
 
-set (VERSION_MAJOR  "0")
-set (VERSION        "0.4.2")
+set (VERSION_MAJOR      "0")
+set (VERSION_COMPLETE   "0.4.2")
 
 include(CheckCXXCompilerFlag)
 

@@ -6,8 +6,8 @@ add_library (hrtimerpp SHARED
 
 target_link_libraries (hrtimerpp m)
 
-set_target_properties( hrtimerpp
-    PROPERTIES VERSION ${VERSION} SOVERSION ${VERSION_MAJOR}
+set_target_properties (hrtimerpp
+    PROPERTIES VERSION ${VERSION_COMPLETE} SOVERSION ${VERSION_MAJOR}
 )
 
 install (TARGETS hrtimerpp DESTINATION lib)

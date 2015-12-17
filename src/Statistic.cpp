@@ -65,7 +65,7 @@ Statistic::Statistic(std::list<double>* series) : Statistic() {
 
 /*
  * This also creates a new empty object and copies all values from the original
- * object to this. This is a deep copy, so the objects remain independend. If
+ * object to this. This is a deep copy, so the objects remain independent. If
  * the original object has already sorted the series, this object do not have to
  * re-sort it.
  */

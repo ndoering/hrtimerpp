@@ -129,7 +129,7 @@ public:
     /**
      * \brief Returns the elapsed time in seconds
      *
-     * \attention Due to the limited precission of a double variable, this can
+     * \attention Due to the limited precision of a double variable, this can
      * be inaccurate.
      */
     double getTimeInSeconds() const;
@@ -137,7 +137,7 @@ public:
     /**
      * \brief Returns the elapsed time in milliseconds
      *
-     * \attention Due to the limited precission of a double variable, this can
+     * \attention Due to the limited precision of a double variable, this can
      * be inaccurate.
      */
     double getTimeInMilliSeconds() const;
@@ -145,7 +145,7 @@ public:
     /**
      * \brief Returns the elapsed time in microseconds
      *
-     * \attention Due to the limited precission of a double variable, this can
+     * \attention Due to the limited precision of a double variable, this can
      * be inaccurate.
      */
     double getTimeInMicroSeconds() const;
@@ -153,7 +153,7 @@ public:
     /**
      * \brief Returns the elapsed time in nanoseconds
      *
-     * \attention Due to the limited precission of a double variable, this can
+     * \attention Due to the limited precision of a double variable, this can
      * be inaccurate.
      */
     double getTimeInNanoSeconds() const;
@@ -209,7 +209,7 @@ public:
      *
      * This method first checks if the objects are the same. If not, the
      * duration of both Timers are checked whether they differ significantly or
-     * not. Since double precission variables tend to be inaccurate in the last
+     * not. Since double precision variables tend to be inaccurate in the last
      * digits of its fractional part. Therefore they are not checked for
      * equality but if they differ in the margin of error. I assume an error
      * margin of 10e-08 is suitable. You can adjust this with the macro

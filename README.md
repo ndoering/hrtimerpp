@@ -8,10 +8,10 @@ This library makes use of features from the C++14 standard. Please make sure, th
 This code respects the version numbering system "Semantic Versioning 2.0.0", as described here: [semver.org](http://semver.org/)
 
 ## Requirements
-* Linux kernel (Version >= 2.6)
-* GCC (Version >= 4.6) or Clang (Version >= 3.0)
-* CMake (Version >= 2.8)
-* Doxygen (Version >= 1.8), for documentation
+* Linux kernel &ge; 2.6
+* GCC &ge; 4.6 or Clang &ge; 3.0
+* CMake &ge; 2.8
+* Doxygen &ge; 1.8, for documentation
 
 ## Roadmap
 * Export of Timer and Timerseries
