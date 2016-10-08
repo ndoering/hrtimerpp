@@ -1,6 +1,7 @@
 # hrtimerpp
 
 *master:* [![Build Status](https://travis-ci.org/ndoering/hrtimerpp.svg?branch=master)](https://travis-ci.org/ndoering/hrtimerpp)
+
 *development* [![Build Status](https://travis-ci.org/ndoering/hrtimerpp.svg?branch=development)](https://travis-ci.org/ndoering/hrtimerpp)
 
 A high resolution timer for Linux systems written in C++.
