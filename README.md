@@ -1,4 +1,6 @@
 # hrtimerpp
+[![Build Status](https://travis-ci.org/ndoering/hrtimerpp.svg?branch=master)](https://travis-ci.org/ndoering/hrtimerpp)
+
 A high resolution timer for Linux systems written in C++.
 
 This library provides a class based interface for high resolution timers for C++. The goal is to have a usable set of class for the needs of time measuring and statistical analysis for series of an arbitrary number of measurements.
