@@ -282,7 +282,7 @@ void Timestamp::setNow() {
 }
 
 /*
- * This returns a double precission variable containing the frequency, which
+ * This returns a double precision variable containing the frequency, which
  * results from the timestamp. The unit is Hertz(Hz). If the time is zero, the
  * frequency returned will be 0.
  */
