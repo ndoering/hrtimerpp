@@ -181,13 +181,9 @@ bool Timer::isEqual(const Timer& rhs) const {
         return true;
     }
 
-    if(*this == rhs and  // time range is equal
+    return (*this == rhs and  // time range is equal
             this->mStartTime == rhs.mStartTime and  // start dates are equal
-            this->mStopTime == rhs.mStopTime) {  // stop dates are equal
-        return true;
-    } else {
-        return false;
-    }
+            this->mStopTime == rhs.mStopTime);
 }
 
 /*

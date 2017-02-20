@@ -137,7 +137,8 @@ Timerseries& Timerseries::operator -=(const Timerseries& rhs) {
     // check for every combination of two Timers in both series
     for(rhsIt = rhs.mTimer->begin(); rhsIt != rhs.mTimer->end(); ++rhsIt){
         for(thisIt = this->mTimer->begin();
-                thisIt != this->mTimer->end(); ++thisIt){
+            thisIt != this->mTimer->end();
+            ++thisIt){
 
             // reference Timer for simplicity
             // iterator -*-> Timer* -*-> Timer
@@ -329,11 +330,7 @@ bool Timerseries::operator >=(const Timerseries& rhs)  const{
     }
 
     // check if all elements of rhs are in this series
-    if(countEquals == rhs.getSize()){
-        return true;
-    } else {
-        return false;
-    }
+    return (countEquals == rhs.getSize());
 }
 /*
  * Check if rhs is a super-set of this series to know if this series is a

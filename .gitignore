@@ -36,3 +36,9 @@ Makefile
 # Doxygen
 .dep.inc
 doc/
+
+# Jetbrains CLion IDE
+.idea
+cmake-build-debug
+Würde .idea/ löschen
+Würde cmake-build-debug/ löschen

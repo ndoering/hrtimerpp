@@ -229,12 +229,8 @@ bool Timestamp::operator ==(const Timestamp& rhs) const {
     }
 
     // check for the time values
-    if(this->getSeconds() == rhs.getSeconds() and
-            this->getNanoSeconds() == rhs.getNanoSeconds()) {
-        return true;
-    } else {
-        return false;
-    }
+    return (this->getSeconds() == rhs.getSeconds() and
+           this->getNanoSeconds() == rhs.getNanoSeconds());
 }
 
 /*
@@ -251,11 +247,9 @@ bool Timestamp::operator !=(const Timestamp& rhs) const {
 bool Timestamp::operator >(const Timestamp& rhs) const {
     if(this->getSeconds() > rhs.getSeconds()) {
         return true;
-    } else if (this->getSeconds() == rhs.getSeconds() &&
-            this->getNanoSeconds() > rhs.getNanoSeconds()) {
-        return true;
     } else {
-        return false;
+        return (this->getSeconds() == rhs.getSeconds() &&
+                this->getNanoSeconds() > rhs.getNanoSeconds());
     }
 }
 

@@ -116,11 +116,7 @@ double Statistic::getPercentile(int percentile,
         double pos = percentile / 100.0 * (this->mNumberOfElements);
 
         /*check if pos points exactly to an element*/
-        if( modf(pos, &position) == 0.0 ){
-            even = true;
-        } else {
-            even = false;
-        }
+        even = ( modf(pos, &position) == 0.0 );
     }
 
     std::list<double>::const_iterator valIter = sortedValues->cbegin();
