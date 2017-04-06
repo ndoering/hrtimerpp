@@ -34,7 +34,6 @@ build/
 Makefile
 
 # Doxygen
-.dep.inc
 doc/
 
 # Jetbrains CLion IDE

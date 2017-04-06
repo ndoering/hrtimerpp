@@ -206,7 +206,7 @@ void Statistic::calculateStatistics() {
  * values is to small to calculate a mean, i.e. for the first meanWidth-1
  * values, 0.0 is added to the list.
  */
-std::list<double>* Statistic::calculateSlidingMean(int meanWidth) const {
+std::list<double>* Statistic::calculateSlidingMean (unsigned long meanWidth) const {
 
     std::list<double>* slidingMean = new std::list<double>();
 
@@ -216,7 +216,7 @@ std::list<double>* Statistic::calculateSlidingMean(int meanWidth) const {
     std::list<double>::iterator lowerValueIter = this->mSeries->begin();
 
     /*go through all elements*/
-    for(int i = 0; i < this->mNumberOfElements; ++i){
+    for(unsigned long i = 0; i < this->mNumberOfElements; ++i){
 
         /*calculate the actual mean*/
         currentMean += *upperValueIter / meanWidth;
@@ -270,7 +270,7 @@ double Statistic::getMean() const{
 /*
  * This returns the number of values.
  */
-int Statistic::getNumberOfElements() const {
+unsigned long Statistic::getNumberOfElements () const {
     return this->mNumberOfElements;
 }
 

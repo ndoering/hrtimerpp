@@ -101,7 +101,7 @@ public:
      * given width.
      * @param meanWidth
      */
-    std::list<double>* calculateSlidingMean(int meanWidth) const;
+    std::list<double>* calculateSlidingMean (unsigned long meanWidth) const;
 
     /**
      * \brief Assign the rhs objects values to this object.
@@ -215,7 +215,7 @@ public:
     /**
      * \brief Returns the number of elements stored in this object.
      */
-    int getNumberOfElements() const;
+    unsigned long getNumberOfElements () const;
 
 private:
 
@@ -226,7 +226,7 @@ private:
     std::list<double>* mSeries;
     std::list<double>* mSortedSeries;
 
-    int mNumberOfElements;
+    unsigned long mNumberOfElements;
 
     double mMean, mMin, mMax,
         mStddev, mVariance, mMedian,

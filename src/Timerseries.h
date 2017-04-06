@@ -282,7 +282,7 @@ public:
     /**
      * \brief Returns the number of Timer in this Timerseries.
      */
-    int getSize() const;
+    unsigned long getSize () const;
 
     /**
      * \brief Returns a copy of all Timers in this Timerseries.

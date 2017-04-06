@@ -310,7 +310,7 @@ bool Timerseries::operator >=(const Timerseries& rhs)  const{
     }
 
     std::list<Timer*>::iterator rhsIt, thisIt;
-    int countEquals = 0;
+    unsigned long countEquals = 0;
 
     // check every possible combination of elements of both lists
     for(rhsIt = rhs.mTimer->begin(); rhsIt != rhs.mTimer->end(); ++rhsIt){
@@ -520,6 +520,6 @@ std::list<double>* Timerseries::getFrequencies() const {
 /*
  * Returns the number of Timer in this series.
  */
-int Timerseries::getSize() const {
+unsigned long Timerseries::getSize () const {
     return this->mTimer->size();
 }
